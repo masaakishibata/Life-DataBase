@@ -1,0 +1,10 @@
+{
+  "launch": {
+    "configurations": [],
+    "compounds": [],
+    "githubPullRequests.hosts": [{
+      "host": "https://github.com/masaakishibata",
+      "token": "fa96df63e9f38f39ab28c1212fa57a921579b1a7"
+    }]
+  }
+}
