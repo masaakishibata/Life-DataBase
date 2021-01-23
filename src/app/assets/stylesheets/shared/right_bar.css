@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right_side {
+  margin-left: 50vw;
+  background-color: deepskyblue;
+  flex-grow: 1;
+}
+
+.right_side_bar_title {
+  font-size: 8vh;
+}
