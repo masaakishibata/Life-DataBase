@@ -1,18 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-
-.top-page-left {
+.right-header {
   display: flex;
-  flex-direction: column;
-}
-
-.right_side {
-  margin-left: 50vw;
+  height: 100vh;
   background-color: deepskyblue;
-  flex-grow: 1;
 }
 
-.right_side_bar_title {
-  font-size: 8vh;
+.right-header-title {
+  font-size: 5vh;
 }
+
