@@ -1,4 +1,14 @@
+
 .main {
-  background: #f8f8f8;
 }
 
+.nav {
+  width: 100vw;
+  display: flex;
+  padding: 5vh 15vw;
+}
+
+.side_bar {
+  justify-content: space-between;
+  flex-grow: 1;
+}
