@@ -54,14 +54,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'devise'
-<<<<<<< HEAD
-=======
 
 group :development do
   gem 'rubocop', require: false
 end
 
->>>>>>> a65209826f6409fdcad1627da96fe0a7a27ae0b0
 gem 'rubocop'
 gem 'rubocop-rails'
 gem 'rails-i18n'

@@ -1,14 +1,16 @@
-
-.main {
-}
-
-.nav {
-  width: 100vw;
+.wrapper {
   display: flex;
-  padding: 5vh 15vw;
 }
 
-.side_bar {
-  justify-content: space-between;
-  flex-grow: 1;
+.left {
+  width: 50%;
+  height: 100vh;
+  background-color: yellow;  
 }
+
+.right {
+  width: 50%;
+  height: 100vh;
+  background-color: deepskyblue;
+}
+
