@@ -2,9 +2,58 @@
   width: 100vw;
   padding: 2vh 15vw;
   display: flex;
-  background-color: greenyellow;
+  background-color: #3ccace;
 }
 
 .title {
   font-size: 5vh;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.left-lists {
+  min-width: 200px;
+  min-height: 50px;
+  background-color: #fff;
+}
+
+.right-lists {
+  display: flex;
+  min-width: 200px;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 5vw;
+  margin-top: 10vh;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 5vw;
+  margin-top: 10vh;
+  color: #333333;
 }

@@ -1,9 +1,28 @@
 .left-header {
-  background-color: yellow;
+  background-color: rgb(152, 243, 92);
   display: flex;
   height: 100vh;
 }
 
-.left-header-title {
+.left-title-contents {
+  background-color: #fff;
+}
+
+.left-title {
   font-size: 5vh;
+}
+
+.service-question-day {
+  font-size: 2.5vh;
+  padding: 5vh 10vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-question-month {
+  font-size: 2.5vh;
+  line-height: 40px;
+  padding: 5vh 10vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }

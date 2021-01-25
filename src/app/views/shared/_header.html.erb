@@ -1,17 +1,27 @@
 <header class='top-page-header'>
-  <div class='title'>
-    <h1>
-      LIFE DATA BASE
-    </h1>
-  </div>
+  <h1 class='title'>
+    LIFE DATA BASE
+  </h1>
   <div class='nav'>
     <ul class='left-lists'>
       <li>
+      生活で使うお金の管理!
+      </li>
+      <li>
+      何にお金を使っていますか？
+      </li>
+      <li>
+      毎日〜毎月・使ってるお金を可視化しよう！
       </li>
     </ul>
-    <ul class='right-lists'>
-      <li>
-      </li>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+          <li><%= link_to current_user.nickname, root_path, class: "user-nickname" %></li> 
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        <% else %>
+          <li><%= link_to 'ログイン', user_session_path, class: "login"%></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <% end %>
     </ul>
   </div>
 </header>
