@@ -14,7 +14,7 @@
       毎日〜毎月・使ってるお金を可視化しよう！
       </li>
     </ul>
-    <ul class='lists-right'>
+    <ul class='right-lists'>
       <% if user_signed_in? %>
           <li><%= link_to current_user.nickname, root_path, class: "user-nickname" %></li> 
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>

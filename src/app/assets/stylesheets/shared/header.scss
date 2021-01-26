@@ -2,7 +2,10 @@
   width: 100vw;
   padding: 2vh 15vw;
   display: flex;
-  background-color: #3ccace;
+  background-image: image-url('ldb-hed.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .title {
@@ -15,18 +18,20 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1vh 0;
+  padding: 50px 0;
 }
 
 .left-lists {
   min-width: 200px;
-  min-height: 50px;
-  background-color: #fff;
+  min-height: 30px;
+  background-color: #3ccace;
 }
 
 .right-lists {
-  display: flex;
-  min-width: 200px;
+  min-width: 100px;
+  min-height: 20px;
+  background-color:  #3ccace;
+  padding-top: 10px;
 }
 
 .user-nickname {
