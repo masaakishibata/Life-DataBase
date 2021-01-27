@@ -5,22 +5,25 @@
   <div class='nav'>
     <ul class='left-lists'>
       <li>
-      生活で使うお金の管理!
+        LIFE あなたの人生で使っている
       </li>
       <li>
-      何にお金を使っていますか？
+        DATA 情報をまとめて
       </li>
       <li>
-      毎日〜毎月・使ってるお金を可視化しよう！
+        BASE 基板を作ろう！
       </li>
     </ul>
     <ul class='right-lists'>
+      <li class="title-message">
+        W E L C O M E
+      </li>
       <% if user_signed_in? %>
           <li><%= link_to current_user.nickname, root_path, class: "user-nickname" %></li> 
-          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+          <li><%= link_to 'ロ グ ア ウ ト', destroy_user_session_path, method: :delete, class: "logout" %></li>
         <% else %>
-          <li><%= link_to 'ログイン', user_session_path, class: "login"%></li>
-          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+          <li><%= link_to 'ロ グ イ ン', user_session_path, class: "login"%></li>
+          <li><%= link_to '新 規 登 録', new_user_registration_path, class: "sign-up" %></li>
         <% end %>
     </ul>
   </div>

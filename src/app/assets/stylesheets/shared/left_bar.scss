@@ -14,6 +14,7 @@
 
 .left-title {
   font-size: 5vh;
+  margin-left: 30px;
 }
 
 .service-question-day {
@@ -24,6 +25,14 @@
 }
 
 .service-question-month {
+  font-size: 2.5vh;
+  line-height: 40px;
+  padding: 5vh 10vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.add {
   font-size: 2.5vh;
   line-height: 40px;
   padding: 5vh 10vw;
