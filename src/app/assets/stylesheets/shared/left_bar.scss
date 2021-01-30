@@ -39,3 +39,20 @@
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
+
+.start-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.start-ldb-btn {
+  width: 100%;
+  background: #888;
+  border: 1px solid #ea352d;
+  color: rgb(248, 232, 6);
+  line-height: 48px;
+  font-size: 14px;
+  padding-left: 35%;
+  cursor: pointer;
+}
