@@ -22,8 +22,8 @@
           <li><%= link_to current_user.nickname, root_path, class: "user-nickname" %></li> 
           <li><%= link_to 'ロ グ ア ウ ト', destroy_user_session_path, method: :delete, class: "logout" %></li>
         <% else %>
-          <li><%= link_to 'L O G I N', user_session_path, class: "login"%></li>
-          <li><%= link_to 'N E W', new_user_registration_path, class: "sign-up" %></li>
+          <li><%= link_to '➡️ L O G I N', user_session_path, class: "login"%></li>
+          <li><%= link_to '➡️ N E W', new_user_registration_path, class: "sign-up" %></li>
         <% end %>
     </ul>
   </div>
