@@ -1,12 +1,12 @@
-class UsersController < ApplicationController
+class ActionsController < ApplicationController
 
   def index
   end
 
   def new
-    @user = User.new
+    @action = Action.new
   end
-  
+
   def create
   end
 
@@ -15,4 +15,5 @@ class UsersController < ApplicationController
 
   def destroy
   end
+
 end

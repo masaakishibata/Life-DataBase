@@ -1,12 +1,12 @@
-class UsersController < ApplicationController
+class ScoresController < ApplicationController
 
   def index
   end
 
   def new
-    @user = User.new
+    @score = Score.new
   end
-  
+
   def create
   end
 

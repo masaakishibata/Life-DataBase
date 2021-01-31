@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 2021_01_18_135705) do
 
   create_table "actions", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.date "living_expenses", null: false
-    t.date "food_expenses", null: false
-    t.date "shopping", null: false
+    t.integer "living_expenses", null: false
+    t.integer "food_expenses", null: false
+    t.integer "shopping", null: false
     t.bigint "user_id"
     t.bigint "score_id"
     t.datetime "created_at", precision: 6, null: false
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2021_01_18_135705) do
   end
 
   create_table "scores", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.date "score_month", null: false
-    t.date "score_day", null: false
+    t.integer "score_month", null: false
+    t.integer "score_day", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

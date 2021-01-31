@@ -1,0 +1,71 @@
+.top-page-header {
+  width: 100vw;
+  padding: 1vh 10vw;
+  display: flex;
+  background-image: image-url('ldb-hed.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.title {
+  font-size: 5vh;
+  color: #3ccace;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.left-lists {
+  min-width: 200px;
+  min-height: 30px;
+  background-color: #3ccace;
+  color: #fff;
+  margin-left: 100px;
+}
+
+.right-lists {
+  min-width: 50px;
+  min-height: 35px;
+  background-color:  #3ccace;
+  margin-right: 100px;
+}
+
+.title-message {
+  color: #fff;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 5vw;
+  margin-top: 5vh;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 5vw;
+  margin-top: 10vh;
+  color: #333333;
+}

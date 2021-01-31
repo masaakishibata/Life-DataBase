@@ -5,12 +5,10 @@
 .left {
   width: 50%;
   height: 100vh;
-  background-color: yellow;  
 }
 
 .right {
   width: 50%;
   height: 100vh;
-  background-color: deepskyblue;
 }
 
