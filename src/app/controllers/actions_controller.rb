@@ -1,6 +1,7 @@
 class ActionsController < ApplicationController
 
   def index
+    @action = Action.new
   end
 
   def new

@@ -1,1 +1,52 @@
 <%= render "shared/header" %>
+
+<div class="service-contents">
+  <div class="service-main">
+    <h1 class="service-main-title">
+    情報を入力しよう！
+    </h1>
+    <%= form_with model: @action, url: user_actions_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+      <div class="food-expenses-form">
+        <h1 class="food-expenses-title">
+          今日の食費を入力してください
+        </h1>
+        <div class="form-group">
+          <div class="form-text-wrap">
+            <label class="form-text">本日の食費</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_field :food_expenses, class:"input-default", id:"food-number", placeholder:"朝、昼、夜", maxlength:"16" %>
+        </div>
+      </div>
+      <div class="shopping-expenses-form">
+        <h1 class="shopping-expenses-title">
+          今日買った物の金額を入力してください
+        </h1>
+        <div class="form-group">
+          <div class="form-text-wrap">
+            <label class="form-text">買い物に使った金額</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_field :shopping, class:"input-default", id:"shopping-number", placeholder:"品物の金額(無い場合は0を入力してください)", maxlength:"16" %>
+        </div>
+      </div>
+      <div class="living-expenses-form">
+        <h1 class="living_expenses-title">
+          今日1日生活していた使った金額を入力してください
+        </h1>
+        <div class="form-group">
+          <div class="form-text-wrap">
+            <label class="form-text">毎日の生活費</label>
+            <span class="indispensable">必須</span>
+            <%= f.text_field :living_expenses, class:"input-default", id:"living-number", placeholder:"買い物と食費以外の費用", maxlength:"16" %>
+          </div>
+        </div>
+      </div>
+        <div class='buy-btn'>
+          <%= f.submit "情報を作成" ,class:"buy-red-btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
