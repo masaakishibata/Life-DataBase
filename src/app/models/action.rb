@@ -1,9 +1,16 @@
 class Action < ApplicationRecord
 
   with_options presence: true do
-    validates :living_expenses
-    validates :food_expenses
-    validates :shopping
+    with_options format: { with: /\A[0-9]+\z/, message: '半角数字で入力してください' } do
+      validates :living_expenses
+      validates :food_expenses
+      validates :shopping
+    end
+
+    validates :living_expenses, numericality: { greater_than_or_equal_to: 1000, less_than: 9999999, message: "は1000円〜9,999,999円の間で入力してください。" }
+    validates :food_expenses, numericality: { greater_than_or_equal_to: 500, less_than: 9999999, message: "は500円〜9,999,999円の間で入力してください。" }
+    validates :shopping, numericality: { greater_than_or_equal_to: 0, less_than: 9999999, message: "は0円〜9,999,999円の間で入力してください。" }
+
   end
   
   belongs_to :scores

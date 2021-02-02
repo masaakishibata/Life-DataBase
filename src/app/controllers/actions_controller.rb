@@ -14,9 +14,9 @@ class ActionsController < ApplicationController
 
   def create
     @action = Actions.new(action_params)
-    if @action.valid?
-      @action.save
-      redirect_to '/users/:id'
+    if @actions.valid?
+      @actions.save
+      redirect_to root_path
     else
       render action: :index
     end
@@ -37,7 +37,7 @@ class ActionsController < ApplicationController
   def update
     @action = Action.find(params[:id])
     @action.update(action_params)
-    redirect_to '/users/:id'
+    redirect_to root_path
   end
 
 
