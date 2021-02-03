@@ -1,0 +1,66 @@
+.main-service {
+  background: #f8f8f8;
+}
+
+.ldb-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.ldb-contents>.action-title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.ldb-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #3ccace;
+  font-weight: bold;
+}
+
+.action-list {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.action-list>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.action-content {
+  position: relative
+}
+
+.action-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.action-food_expenses {
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-shopping {
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-living_expenses {
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: space-between;
+}

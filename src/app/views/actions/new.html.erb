@@ -2,15 +2,14 @@
 
 <div class="service-contents">
   <div class="service-main">
-    <h1 class="service-main-title">
-    情報を入力しよう！
-    </h1>
-    <%= form_with model: @action, url: user_actions_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
+    <h1 class="service-main-title">情報を入力しよう！</h1>
+    
+    <%= form_with model: @action, url: new_user_action_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
+
       <%= render 'shared/error_messages', model: f.object %>
+
       <div class="food-expenses-form">
-        <h1 class="food-expenses-title">
-          今日の食費を入力してください
-        </h1>
+        <h1 class="food-expenses-title">今日の食費を入力してください</h1>
         <div class="form-group">
           <div class="form-text-wrap">
             <label class="form-text">本日の食費</label>
@@ -20,9 +19,7 @@
         </div>
       </div>
       <div class="shopping-expenses-form">
-        <h1 class="shopping-expenses-title">
-          今日買った物の金額を入力してください
-        </h1>
+        <h1 class="shopping-expenses-title">今日買った物の金額を入力してください</h1>
         <div class="form-group">
           <div class="form-text-wrap">
             <label class="form-text">買い物に使った金額</label>
@@ -32,9 +29,7 @@
         </div>
       </div>
       <div class="living-expenses-form">
-        <h1 class="living_expenses-title">
-          今日1日生活していた使った金額を入力してください
-        </h1>
+        <h1 class="living_expenses-title">今日1日生活していた使った金額を入力してください</h1>
         <div class="form-group">
           <div class="form-text-wrap">
             <label class="form-text">毎日の生活費</label>
@@ -43,11 +38,11 @@
           </div>
         </div>
       </div>
-      <%# <a href='/users/:id'> %>
+      <a href='/users/:id'>
         <div class='input-btn'>
           <%= f.submit "情報を作成" ,class:"input-red-btn" %>
         </div>
-      <%# </a> %>
+      </a>
     <% end %>
   </div>
 </div>
