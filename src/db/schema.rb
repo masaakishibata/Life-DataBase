@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_01_18_135705) do
   end
 
   create_table "scores", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "score_year", null: false
     t.integer "score_month", null: false
     t.integer "score_day", null: false
     t.bigint "user_id"

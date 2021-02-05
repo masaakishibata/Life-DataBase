@@ -1,24 +1,19 @@
 <div class="right-header">
 
   <div class="right-title-contents">
-    <a href='/users/sign_in'>
-      <h3 class="right-title">
-        情報を管理しよう
-      </h3>
-    </a>
-    <a href='/users/:user_id/actions/new'>
-      <p class="service-add">
-        自分の情報を管理できていますか？
-      </p>
-      <p class="add-title">
-        食費で使っているお金！
-      </p>
-      <p class="add-title2">
-        買い物で使っているお金！
-      </p>
-      <p class="add-title3">
-        生活費で使っているお金！
-      </p>
-    </a>
+    <a href='/users/sign_in'><h3 class="right-title">情報を管理しよう</h3></a>
+    <% if user_signed_in? %>
+      <a href='/users/:user_id/actions/new'>
+        <p class="service-add">自分の情報を管理できていますか？</p>
+        <p class="add-title">食費で使っているお金！</p>
+        <p class="add-title2">買い物で使っているお金！</p>
+        <p class="add-title3">生活費で使っているお金！</p>
+      </a>
+    <% else %>
+      <p class="service-add">自分の情報を管理できていますか？</p>
+      <p class="add-title">食費で使っているお金！</p>
+      <p class="add-title2">買い物で使っているお金！</p>
+      <p class="add-title3">生活費で使っているお金！</p>
+    <% end %>
   </div>
 </div>

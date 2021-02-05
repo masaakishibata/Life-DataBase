@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+
+<div class='scores-contents'>
+  <div class='scores-main'>
+    <h1 class='scores-title'>毎月〜毎日の費用を計算しよう！</h1>
+    <%= form_with model: @score, url: new_user_score_path, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class='new-scores'>
+      <div class="weight-bold-text">
+        西暦を入力
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :score_year, class:"yera-text", placeholder:"例) 2020", maxlength:"4" %>
+      <div class="weight-bold-text">
+        月を入力
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :score_month, class:"month-text", placeholder:"例) 08", maxlength:"2" %>
+      <div class="weight-bold-text">
+        日付を入力
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :score_day, class:"day-text", placeholder:"例) 22", maxlength:"2" %>
+    </div>
+  </div>
+</div>
