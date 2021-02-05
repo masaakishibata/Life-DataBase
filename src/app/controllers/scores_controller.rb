@@ -12,12 +12,12 @@ class ScoresController < ApplicationController
   end
 
   def create
-    @score = Scores.new(score_params)
+    @score = Score.new(score_params)
     if @score.valid?
       @score.save
       redirect_to root_path
     else
-      render action: :index
+      render action: :new
     end
   end
 
@@ -34,7 +34,7 @@ class ScoresController < ApplicationController
   end
 
   def update
-    @score = Scores.find(params[:id])
+    @score = Score.find(params[:id])
     @score.update(score_params)
     redirect_to '/users/:id'
   end
@@ -45,6 +45,7 @@ class ScoresController < ApplicationController
     params.require(:scores).permit(
       :score_month,
       :score_day,
+      :score_year,
     ).merge(
       user_id: current_user.id,
     )

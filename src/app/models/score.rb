@@ -6,5 +6,5 @@ class Score < ApplicationRecord
     validates :score_year
   end
 
-  belongs_to :users
+  belongs_to :user
 end
