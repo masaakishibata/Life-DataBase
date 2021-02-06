@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 2021_01_18_135705) do
     t.integer "score_year", null: false
     t.integer "score_month", null: false
     t.integer "score_day", null: false
+    t.integer "monthly_income", null: false
+    t.integer "pay", null: false
+    t.integer "pay_all", null: false
+    t.integer "expense", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

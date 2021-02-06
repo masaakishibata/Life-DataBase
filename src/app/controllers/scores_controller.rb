@@ -46,6 +46,10 @@ class ScoresController < ApplicationController
       :score_month,
       :score_day,
       :score_year,
+      :monthly_income,
+      :pay,
+      :pay_all,
+      :expense,
     ).merge(
       user_id: current_user.id,
     )

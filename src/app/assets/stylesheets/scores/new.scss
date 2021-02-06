@@ -10,45 +10,33 @@
 
 .scores-main {
   background-color: #FFF;
-  width: 70vw;
+  width: 70%;
+  height: 100%;
   min-width: 450px;
-  padding: 10vh 15vw;
+  padding: 15vh 20vw;
 }
 
 .scores-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
 
 .new-scores {
-  padding: 2vh 0;
+  padding: 5px 0;
+}
+
+.weight-bold-text {
+  margin-left: 25%;
 }
 
 .yera-text {
-  width: 100%;
-  padding: 16px 16px 8px;
+  width: 25%;
+  padding: 10px 10px 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
   font-size: 16px;
-  resize: none;
-}
-
-.month-text {
-  width: 100%;
-  padding: 16px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  resize: none;
-}
-
-.day-text {
-  width: 100%;
-  padding: 16px 16px 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+  margin-left: 25%;
   resize: none;
 }
 
@@ -56,9 +44,16 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  text-align: center;
 }
 
-.score_month-content {
+.score_month_title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.score_month_content {
   width: 300px;
   border-bottom: 1px solid #ccc;
   padding: 10px;
@@ -67,7 +62,19 @@
   justify-content: space-between;
 }
 
-.score_month-text {
+.monthly_income_text {
+  /* min-width: 170px; */
+  display: flex;
+  align-items: center;
+}
+
+.score_month_expense_text {
+  /* min-width: 170px; */
+  display: flex;
+  align-items: center;
+}
+
+.score_month_text {
   /* min-width: 170px; */
   display: flex;
   align-items: center;
@@ -77,33 +84,83 @@
   font-size: 18px;
 }
 
-.score_month-input {
+.score_monthly_income_input {
   height: 30px;
   text-align: right;
   padding-right: 10px;
 }
 
-.score_day-content {
+.score_month_expense_input {
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.score_day_title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.score_day_content {
   width: 300px;
   border-bottom: 1px solid #ccc;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.score_day-text {
+.score_pay_text {
   /* min-width: 170px; */
   display: flex;
   align-items: center;
 }
 
-.score-yen {
-  font-size: 18px;
-}
-
-.score_day-input {
+.score_pay_input {
   height: 30px;
   text-align: right;
   padding-right: 10px;
 }
+
+.score_pay_all_text {
+  /* min-width: 170px; */
+  display: flex;
+  align-items: center;
+}
+
+.score_pay_all_input {
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.score_day_text {
+  /* min-width: 170px; */
+  display: flex;
+  align-items: center;
+}
+
+.score_day_input {
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.input-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.input-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
