@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   min-width: 500px;
+  height: 100%;
 }
 
 .scores-main {
@@ -13,7 +14,7 @@
   width: 70%;
   height: 100%;
   min-width: 450px;
-  padding: 15vh 20vw;
+  padding: 5vh 20vw;
 }
 
 .scores-title {
@@ -23,12 +24,14 @@
 }
 
 .new-scores {
-  padding: 5px 0;
+  padding: 5px;
 }
 
 .weight-bold-text {
   margin-left: 25%;
 }
+
+// <%# yera-content %>
 
 .yera-text {
   width: 25%;
@@ -40,12 +43,20 @@
   resize: none;
 }
 
+// <%# yera-content %>
+
+
 .score-input {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 25px;
 }
+
+// <%# month-content %>
 
 .score_month_title {
   font-size: 20px;
@@ -54,30 +65,38 @@
 }
 
 .score_month_content {
-  width: 300px;
-  border-bottom: 1px solid #ccc;
+  width: 80%;
+  height: 25%;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #3ccace;
 }
 
 .monthly_income_text {
   /* min-width: 170px; */
   display: flex;
   align-items: center;
+  margin: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .score_month_expense_text {
   /* min-width: 170px; */
   display: flex;
   align-items: center;
+  margin: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .score_month_text {
   /* min-width: 170px; */
   display: flex;
   align-items: center;
+  margin: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .score-yen {
@@ -87,80 +106,102 @@
 .score_monthly_income_input {
   height: 30px;
   text-align: right;
-  padding-right: 10px;
+  padding: 10px;
 }
 
 .score_month_expense_input {
   height: 30px;
   text-align: right;
-  padding-right: 10px;
+  padding: 10px;
 }
+
+.score_month_input {
+  height: 30px;
+  text-align: right;
+  padding: 10px;
+}
+
+// <%# month-content %>
+
+// <%# day-content %>
 
 .score_day_title {
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
 }
 
 .score_day_content {
-  width: 300px;
-  border-bottom: 1px solid #ccc;
-  padding: 5px;
+  width: 80%;
+  height: 25%;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #3ccace;
 }
 
 .score_pay_text {
-  /* min-width: 170px; */
+  min-width: 170px;
+  margin: 10px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
 .score_pay_input {
   height: 30px;
   text-align: right;
-  padding-right: 10px;
 }
 
 .score_pay_all_text {
-  /* min-width: 170px; */
+  min-width: 170px;
+  margin: 10px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
 .score_pay_all_input {
   height: 30px;
   text-align: right;
-  padding-right: 10px;
 }
 
 .score_day_text {
-  /* min-width: 170px; */
+  min-width: 170px;
+  margin: 10px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ccc;
 }
 
 .score_day_input {
   height: 30px;
   text-align: right;
-  padding-right: 10px;
 }
 
+// <%# day-content %>
+
+// <%# btn-content %>
+
 .input-btn {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .input-red-btn {
-  width: 100%;
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  font-size: 35px;
+  padding: 8px;
 }
+
+// <%# btn-content %>
 
 
