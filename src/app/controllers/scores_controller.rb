@@ -5,6 +5,8 @@ class ScoresController < ApplicationController
 
   def new
     @score = Score.new
+    @month = Scores.new
+    month_score
   end
 
   def edit
@@ -54,4 +56,17 @@ class ScoresController < ApplicationController
       user_id: current_user.id,
     )
   end
+
+
+  def month_score
+    
+    @month do
+      z = (x - y)
+    end
+
+    x = monthly_income
+    y = expense
+    z = score_month
+  end
+
 end

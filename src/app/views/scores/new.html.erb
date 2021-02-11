@@ -14,6 +14,7 @@
       </div>
       <%= f.text_area :score_year, class:"yera-text", id:"yera-score", placeholder:"例) 2020", maxlength:"4" %>
 
+    <% @month.input do %>
       <div class="score-input">
         <p class='score_month_title'>月間の計算をしよう！</p>
         <div class="weight-bold-text-question-text">
@@ -45,6 +46,7 @@
           </div>
         </div>
       </div>
+    <% end %>
 
       <div class="score-input">
         <p class='score_day_title'>日々の出費を計算しよう！</p>
