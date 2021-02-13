@@ -4,23 +4,24 @@
   <div class="ldb-contents">
     <h1 class="action-title">あなたが日頃つかっている費用です</h1>
     <%= link_to '追加で情報を入力する', "/users/:user_id/actions/new", class: "subtitle" %>
-    <ul class='action-list'>
-    <% if @actios.length > 0 %>
-      <% @actios.each do |action| %>
-        <li class='list'>
-          <%= link_to action_path(action.id) do %>
-            <div class='action-content'>
-              <div class='action-info'>
-                <h2 class='action-food_expenses'>飲食に使うお金</h2>
-                <%= actios.food_expenses %><br>
-                <h2 class='action-shopping'>買い物に使うお金</h2>
-                <%= actios.shopping %><br>
-                <h2 class='action-living_expenses'>生活していく事に必要なお金</h2>
-                <%= actios.living_expenses %>
-              </div>
-            </div>
-          <% end %>
-        </li>
-    </ul>
+    <div class='action-explain-box'>
+      <span>入力した情報です</span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-title">飲食に使うお金</th>
+          <td class="detail-value"><%= @user_actions.food_expenses %></td>
+        </tr>
+        <tr>
+          <th class="detail-title">買い物に使うお金</th>
+          <td class="detail-value"><%= @user_actions.shopping %></td>
+        </tr>
+        <tr>
+          <th class="detail-title">生活していく事に必要なお金</th>
+          <td class="detail-value"><%= @user_actions.living_expenses %></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

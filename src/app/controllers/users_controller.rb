@@ -18,8 +18,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_score = Score.all.order("created_at DESC")
-    @user_action = Action.all.order("created_at DESC")
+    @user_scores = Score.all.order("created_at DESC")
+    @user_actions = Action.all.order("created_at DESC")
   end
 
   def destroy

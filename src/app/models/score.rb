@@ -10,21 +10,21 @@ class Score < ApplicationRecord
     validates :expense
   end
 
-  def month_score(add)
+  # def month_score(add)
 
-    def initialize(score_month, monthly_income, expense)
-      @score_month = x
-      @monthly_income = y
-      @expense = z
-    end
+  #   def initialize(score_month, monthly_income, expense)
+  #     @score_month = x
+  #     @monthly_income = y
+  #     @expense = z
+  #   end
 
-    def add
-      @add = self.puts "#{@monthly_income - @expense = @score_month}"
-    end
-  end
+  #   def add
+  #     @add = self.puts "#{@monthly_income - @expense = @score_month}"
+  #   end
+  # end
   
-  month_score = Score.new(score_month, monthly_income, expense)
-  month_score.add
+  # month_score = Score.new(score_month, monthly_income, expense)
+  # month_score.add
   
   belongs_to :user
 end

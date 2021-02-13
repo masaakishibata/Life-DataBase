@@ -1,13 +1,20 @@
 .main-service {
-  background: #f8f8f8;
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
 }
 
 .ldb-contents {
   background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
 }
 
 .ldb-contents>.action-title {
@@ -24,21 +31,29 @@
   font-weight: bold;
 }
 
-.action-list {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.action-explain-box {
+  font-size: 18px;
+  margin: 40px 0px;
 }
 
-.action-list>.list {
-  width: 37vh;
-  padding: 1vw;
-  background-color: #FFF;
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
 }
 
-.action-content {
-  position: relative
+.detail-title {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
 }
 
 .action-info {
@@ -47,19 +62,19 @@
   padding: 1vw;
 }
 
-.action-food_expenses {
+.action_food_expenses {
   font-size: 2.5vh;
   display: flex;
   justify-content: space-between;
 }
 
-.action-shopping {
+.action_shopping {
   font-size: 2.5vh;
   display: flex;
   justify-content: space-between;
 }
 
-.action-living_expenses {
+.action_living_expenses {
   font-size: 2.5vh;
   display: flex;
   justify-content: space-between;
