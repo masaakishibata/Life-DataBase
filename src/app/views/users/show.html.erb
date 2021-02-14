@@ -2,26 +2,28 @@
 <div class="main-service">
 
   <div class="ldb-contents">
-    <h1 class="action-title">あなたが日頃つかっている費用です</h1>
-    <%= link_to '追加で情報を入力する', "/users/:user_id/actions/new", class: "subtitle" %>
-    <div class='action-explain-box'>
-      <span>入力した情報です</span>
-    </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-title">飲食に使うお金</th>
-          <td class="detail-value"><%= @user_actions.food_expenses %></td>
-        </tr>
-        <tr>
-          <th class="detail-title">買い物に使うお金</th>
-          <td class="detail-value"><%= @user_actions.shopping %></td>
-        </tr>
-        <tr>
-          <th class="detail-title">生活していく事に必要なお金</th>
-          <td class="detail-value"><%= @user_actions.living_expenses %></td>
-        </tr>
-      </tbody>
-    </table>
+    <%= form_with model: [@user], local: true do |f| %>
+      <h1 class="action-title">あなたが日頃つかっている費用です</h1>
+      <%= link_to '追加で情報を入力する', "/users/:user_id/actions/new", class: "subtitle" %>
+      <div class='action-explain-box'>
+        <span>入力した情報です</span>
+      </div>
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-title">飲食に使うお金</th>
+            <td class="detail-value"><%= @action.food_expenses %></td>
+          </tr>
+          <tr>
+            <th class="detail-title">買い物に使うお金</th>
+            <td class="detail-value"><%= @action.shopping %></td>
+          </tr>
+          <tr>
+            <th class="detail-title">生活していく事に必要なお金</th>
+            <td class="detail-value"><%= @action.living_expenses %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
   </div>
 </div>

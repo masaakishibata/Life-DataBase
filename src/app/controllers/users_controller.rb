@@ -18,8 +18,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user_scores = Score.all.order("created_at DESC")
-    @user_actions = Action.all.order("created_at DESC")
+    @score = Score.all.order("created_at DESC")
+    @action = Action.all.order("created_at DESC")
+    @user = User.find(params[:id])
+    @score = Score.find(params[:id])
+    @action = Action.find(params[:id])
   end
 
   def destroy
@@ -33,6 +36,8 @@ class UsersController < ApplicationController
       :email,
       :password,
     ).merge(
+      action_id: params[:action_id],
+      score_id: params[:score_id],
       token: params[:token],
     )
   end
