@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_01_18_135705) do
     t.integer "living_expenses", null: false
     t.integer "food_expenses", null: false
     t.integer "shopping", null: false
+    t.integer "action_day", null: false
     t.bigint "user_id"
     t.bigint "score_id"
     t.datetime "created_at", precision: 6, null: false

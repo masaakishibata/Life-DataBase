@@ -5,24 +5,15 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @score = Score.new
-    @action = Action.new
   end
 
   def edit
-    @score = Score.find(params[:id])
-    @action = Action.find(params[:id])
   end
   
   def create
   end
 
   def show
-    @score = Score.all.order("created_at DESC")
-    @action = Action.all.order("created_at DESC")
-    @user = User.find(params[:id])
-    @score = Score.find(params[:id])
-    @action = Action.find(params[:id])
   end
 
   def destroy

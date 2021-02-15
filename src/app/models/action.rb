@@ -5,6 +5,7 @@ class Action < ApplicationRecord
       validates :living_expenses
       validates :food_expenses
       validates :shopping
+      validates :action_day, length: {minimum: 8} 
     end
 
     validates :living_expenses, numericality: { greater_than_or_equal_to: 1000, less_than: 9999999, message: "は1000円〜9,999,999円の間で入力してください。" }

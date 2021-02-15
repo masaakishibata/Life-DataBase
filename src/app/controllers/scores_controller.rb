@@ -5,10 +5,6 @@ class ScoresController < ApplicationController
 
   def new
     @score = Score.new
-    # @month = @score.month_score(params[:user_id])
-    # score_month = x
-    # monthly_income = y
-    # expense = z
   end
 
   def edit

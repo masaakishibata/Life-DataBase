@@ -12,16 +12,36 @@
   padding: 10vh 10vw;
 }
 
-.service-main-title {
+.service-main>.service-main-title {
   text-align: center;
   border-bottom: 2px solid #f5f5f5;
   font-weight: bold;
   font-size: 22px;
 }
 
+.action-day-form {
+  margin-top: 15px;
+}
+
+.action-day-title {
+  width: 30%;
+  margin-top: 5px;
+  margin-left: 25%;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #3ccace;
+  font-size: 16px;
+  resize: none;
+  line-height: 30px;
+  text-align: center;
+}
+
 .food-expenses-form {
   margin-top: 15px;
 }
+
 
 .food-expenses-title {
   width: 30%;

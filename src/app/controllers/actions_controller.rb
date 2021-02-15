@@ -1,11 +1,12 @@
 class ActionsController < ApplicationController
+  before_action :action_new, only: [:index, :new, :edit, :show]
+  before_action :action_find, only: [:index, :show]
+
 
   def index
-    @action = Action.new
   end
 
   def new
-    @action = Action.new
   end
 
   def edit
@@ -18,7 +19,7 @@ class ActionsController < ApplicationController
       @actions.save
       redirect_to root_path
     else
-      render action: :index
+      render action: :new
     end
   end
 
@@ -48,8 +49,19 @@ class ActionsController < ApplicationController
       :living_expenses,
       :food_expenses,
       :shopping,
+      :action_day,
     ).merge(
+      score_id: params[:score_id],
       user_id: current_user.id,
     )
   end
+
+  def action_new
+    @action = Action.new
+  end
+
+  def action_find
+    @action = Action.find(params[:id])
+  end
+
 end
