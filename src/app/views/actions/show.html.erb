@@ -2,7 +2,7 @@
 <div class="action-main-service">
 
   <div class="ldb-action-contents">
-    <%= form_with model: @action, local: true do |f| %>
+    <%= form_with model: [@user,@action], url: user_action_path, local: true do |f| %>
       <h1 class="action-title">あなたが日頃つかっている費用です</h1>
       <%= link_to '追加で情報を入力する', "/users/:user_id/actions/new", class: "subtitle" %>
       <div class='action-explain-box'>

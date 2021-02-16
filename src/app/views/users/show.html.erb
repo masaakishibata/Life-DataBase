@@ -2,11 +2,11 @@
 <div class="main-service">
 
   <div class="ldb-contents">
-    <%= form_with model: [@user], local: true do |f| %>
+    <%= form_with model: @user, local: true do |f| %>
       <h1 class="action-title">あなたが日頃つかっている費用です</h1>
       <%= link_to '追加で情報を入力する', "/users/:user_id/actions/new", class: "subtitle" %>
       <div class='action-explain-box'>
-        <span>入力した情報です</span>
+        <%= @action.action_day%>
       </div>
       <table class="detail-table">
         <tbody>

@@ -1,4 +1,6 @@
 class ScoresController < ApplicationController
+  before_action :score_new, only: [:index, :new, :edit, :show]
+
 
   def index
   end
@@ -12,7 +14,7 @@ class ScoresController < ApplicationController
   end
 
   def create
-    @score = Score.new(score_params)
+    @score = Score.create(score_params)
     if @score.valid?
       @score.save
       redirect_to root_path
@@ -42,7 +44,7 @@ class ScoresController < ApplicationController
   private
 
   def score_params
-    params.require(:scores).permit(
+    params.require(:score).permit(
       :score_month,
       :score_day,
       :score_year,
@@ -53,6 +55,10 @@ class ScoresController < ApplicationController
     ).merge(
       user_id: current_user.id,
     )
+  end
+
+  def score_new
+    @score = Score.new
   end
 
 end
