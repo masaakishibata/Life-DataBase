@@ -1,4 +1,4 @@
-.main-service {
+.action-main-service {
   background-color: #f8f8f8;
   width: 100vw;
   display: flex;
@@ -7,7 +7,7 @@
   padding: 5vh 0;
 }
 
-.ldb-contents {
+.ldb-action-contents {
   background-color: #FFF;
   width: 70vw;
   min-width: 1200px;

@@ -4,7 +4,11 @@ class Score < ApplicationRecord
     validates :score_month
     validates :score_day
     validates :score_year
+    validates :monthly_income
+    validates :pay
+    validates :pay_all
+    validates :expense
   end
-
-  belongs_to :users
+  
+  belongs_to :user
 end

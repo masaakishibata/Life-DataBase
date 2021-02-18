@@ -3,11 +3,20 @@
 <div class="service-contents">
   <div class="service-main">
     <h1 class="service-main-title">情報を入力しよう！</h1>
-    
     <%= form_with model: @action, url: new_user_action_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
 
       <%= render 'shared/error_messages', model: f.object %>
 
+      <div class="action-day-form">
+        <h1 class="action-day-title">日付を入力</h1>
+        <div class="form-group">
+          <div class="form-text-wrap">
+            <label class="form-text">西暦〜今日</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :action_day, class:"input-default", id:"action-day-number", placeholder:"20200101ハイフン無し", maxlength:"8" %>
+        </div>
+      </div>
       <div class="food-expenses-form">
         <h1 class="food-expenses-title">今日の食費を入力してください</h1>
         <div class="form-group">
@@ -15,7 +24,7 @@
             <label class="form-text">本日の食費</label>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :food_expenses, class:"input-default", id:"food-number", placeholder:"朝、昼、夜", maxlength:"16" %>
+          <%= f.text_area :food_expenses, class:"input-default", id:"food-number", placeholder:"朝、昼、夜の合計", maxlength:"16" %>
         </div>
       </div>
       <div class="shopping-expenses-form">
@@ -25,7 +34,7 @@
             <label class="form-text">買い物に使った金額</label>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :shopping, class:"input-default", id:"shopping-number", placeholder:"品物の金額(無い場合は0を入力してください)", maxlength:"16" %>
+          <%= f.text_area :shopping, class:"input-default", id:"shopping-number", placeholder:"品物の金額(無い場合は0を入力してください)", maxlength:"16" %>
         </div>
       </div>
       <div class="living-expenses-form">
@@ -34,13 +43,13 @@
           <div class="form-text-wrap">
             <label class="form-text">毎日の生活費</label>
             <span class="indispensable">必須</span>
-            <%= f.text_field :living_expenses, class:"input-default", id:"living-number", placeholder:"買い物と食費以外の費用", maxlength:"16" %>
+            <%= f.text_area :living_expenses, class:"input-default", id:"living-number", placeholder:"買い物と食費以外の費用", maxlength:"16" %>
           </div>
         </div>
       </div>
-      <a href='/users/:id'>
-        <div class='input-btn'>
-          <%= f.submit "情報を作成" ,class:"input-red-btn" %>
+      <a href='/users/:user_id/actions/:id'>
+        <div class='input-content-btn'>
+          <%= f.submit "情報を作成" ,class:"input-ldb-btn" %>
         </div>
       </a>
     <% end %>

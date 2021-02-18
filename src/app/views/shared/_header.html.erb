@@ -1,7 +1,15 @@
 <header class='top-page-header'>
-  <h1 class='title'>
-    LIFE DATA BASE
-  </h1>
+  <% if user_signed_in? %>
+    <a href='/'>
+      <h1 class='title'>
+        LIFE DATA BASE
+      </h1>
+    </a>
+  <% else %>
+    <h1 class='title'>
+      LIFE DATA BASE
+    </h1>
+  <% end %>
   <div class='nav'>
     <ul class='left-lists'>
       <li>

@@ -1,4 +1,4 @@
-.main-service {
+.action-main-service {
   background-color: #f8f8f8;
   width: 100vw;
   display: flex;
@@ -7,7 +7,7 @@
   padding: 5vh 0;
 }
 
-.ldb-contents {
+.ldb-action-contents {
   background-color: #FFF;
   width: 70vw;
   min-width: 1200px;
@@ -62,7 +62,7 @@
   padding: 1vw;
 }
 
-.action_food_expenses {
+/* .action_food_expenses {
   font-size: 2.5vh;
   display: flex;
   justify-content: space-between;
@@ -78,4 +78,4 @@
   font-size: 2.5vh;
   display: flex;
   justify-content: space-between;
-}
+} */

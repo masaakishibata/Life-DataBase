@@ -12,17 +12,87 @@
         西暦を入力
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :score_year, class:"yera-text", placeholder:"例) 2020", maxlength:"4" %>
-      <div class="weight-bold-text">
-        月を入力
-        <span class="indispensable">必須</span>
+      <%= f.text_area :score_year, class:"yera-text", id:"yera-score", placeholder:"例) 2020", maxlength:"4" %>
+
+    <%# <% if @month.length > 0 do %>
+      <%# <% @month do %> 
+      <div class="score-input">
+        <p class='score_month_title'>月間の計算をしよう！</p>
+        <div class="weight-bold-text-question-text">
+          <span>月収<br>(¥0〜9,999,999)</span>
+          <a class="question" href="#">?</a>
+        </div>
+        <div class="score_month_content">
+          <div class="monthly_income_text">
+            <span>月収</span>
+            <span class="indispensable">必須</span>
+            <span class="score-yen">¥</span>
+            <%= f.text_field :monthly_income, class:"score_monthly_income_input", id:"monthly-income-score", placeholder:"例）300" %>
+          </div>
+        </div>
+        <div class="score_month_content">
+          <div class='score_month_expense_text'>
+            <span>出費</span>
+            <span class="indispensable">必須</span>
+            <span class="score-yen">¥</span>
+            <%= f.text_field :expense, class:"score_month_expense_input", id:"expense-score", placeholder:"例）300" %>
+          </div>
+        </div>
+        <div class="score_month_content">
+          <div class='score_month_text'>
+            <span>月間の出費</span>
+            <span class="indispensable">必須</span>
+            <span class="score-yen">¥</span>
+            <%= f.text_field :score_month, class:"score_month_input", id:"month-score", placeholder:"例）300" %>
+          </div>
+        </div>
       </div>
-      <%= f.text_area :score_month, class:"month-text", placeholder:"例) 08", maxlength:"2" %>
-      <div class="weight-bold-text">
-        日付を入力
-        <span class="indispensable">必須</span>
+    <%# <% end %> 
+
+      <div class="score-input">
+        <p class='score_day_title'>日々の出費を計算しよう！</p>
+        <div class="weight-bold-text-question-text">
+          <span>本日の出費<br>(¥0〜9,999,999)</span>
+          <a class="question" href="#">?</a>
+        </div>
+        <div class="score_day_content">
+          <div class="score_pay_text">
+            <span>所持金</span>
+            <span class="indispensable">必須</span>
+            <span class="score-yen">¥</span>
+            <%= f.text_field :pay, class:"score_day_pay_input", id:"score_pay_day", placeholder:"例）300" %>
+          </div>
+        </div>
+        <div class="score_day_content">
+          <div class="score_pay_all_text">
+            <span>使ったお金</span>
+            <span class="indispensable">必須</span>
+            <span class="score-yen">¥</span>
+            <%= f.text_field :pay_all, class:"score_pay_all_input", id:"score_pay_all_day", placeholder:"例）300" %>
+          </div>
+        </div>
+        <div class="score_day_content">
+          <div class="score_day_text">
+            <span>本日の出費</span>
+            <span class="indispensable">必須</span>
+            <span class="score-yen">¥</span>
+            <%= f.text_field :score_day, class:"score_day_input", id:"score_day", placeholder:"例）300" %>
+          </div>
       </div>
-      <%= f.text_area :score_day, class:"day-text", placeholder:"例) 22", maxlength:"2" %>
+      <% if user_signed_in? %>
+        <a href='/users/:user_id/scores/:id'>
+          <div class='input-btn'>
+            <%= f.submit "計算結果を保存する" ,class:"input-red-btn" %>
+          </div>
+        </a>
+      <% else %>
+        <a href='/users/sign_up'>
+          <div class='input-btn'>
+            <%= f.submit "アカウントを作成する" ,class:"input-red-btn" %>
+          </div>
+        </a>
+      <% end %>
     </div>
+    <% end %>
   </div>
 </div>

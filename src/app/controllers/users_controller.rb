@@ -5,21 +5,18 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @score = Score.new
-    @action = Action.new
   end
 
   def edit
-    @score = Score.find(params[:id])
-    @action = Action.find(params[:id])
   end
   
   def create
+    User.create(user_params)
   end
 
   def show
-    @user_score = Score.all.order("created_at DESC")
-    @user_action = Action.all.order("created_at DESC")
+    @action = Action.find(:id,params[:action_id])
+    @score = Score.find(:id,params[:score_id])
   end
 
   def destroy
@@ -28,11 +25,13 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:users).permit(
+    params.require(:user).permit(
       :nickname,
       :email,
       :password,
     ).merge(
+      action_id: params[:action_id],
+      score_id: params[:score_id],
       token: params[:token],
     )
   end
