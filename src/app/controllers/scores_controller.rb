@@ -14,10 +14,11 @@ class ScoresController < ApplicationController
   end
 
   def create
-    @score = Score.create(score_params)
+    # binding.pry
+    @score = current_user.scores.create(score_params)
     if @score.valid?
       @score.save
-      redirect_to root_path
+      redirect_to user_scores_path
     else
       render action: :new
     end
@@ -38,7 +39,7 @@ class ScoresController < ApplicationController
   def update
     @score = Score.find(params[:id])
     @score.update(score_params)
-    redirect_to '/users/:id'
+    redirect_to user_scores_path
   end
 
   private
@@ -52,8 +53,6 @@ class ScoresController < ApplicationController
       :pay,
       :pay_all,
       :expense,
-    ).merge(
-      user_id: current_user.id,
     )
   end
 

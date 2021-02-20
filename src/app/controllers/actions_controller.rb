@@ -16,10 +16,10 @@ class ActionsController < ApplicationController
   end
 
   def create
-    @action = Action.create(action_params)
+    @action = current_user.actions.create(action_params)
     if @actions.valid?
       @actions.save
-      redirect_to root_path
+      redirect_to user_actions_path
     else
       render action: :new
     end
@@ -54,9 +54,6 @@ class ActionsController < ApplicationController
       :food_expenses,
       :shopping,
       :action_day,
-    ).merge(
-      score_id: params[:score_id],
-      user_id: current_user.id,
     )
   end
 

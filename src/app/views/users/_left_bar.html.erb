@@ -12,12 +12,8 @@
     <p class="add">
        Let's go !!!
     </p>
-    <a href='/users/:user_id/scores/new'>
-      <div class='start-btn'>
-        <h2 class="start-ldb-btn">
-          S T A R T
-        </h2>
-     </div>
-    </a>
+    <div class="login-btn">
+      <%= link_to '計算する', new_user_score_path(current_user), class:"login-red-btn" %>
+    </div>
   </div>
 </div>

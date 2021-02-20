@@ -2,9 +2,8 @@
 <div class="score-main-service">
 
   <div class="ldb-score-contents">
-    <%= form_with model: [@user, @score], url:  user_score_path, local: true do |f| %>
       <h1 class="score-title">本日の計算結果です</h1>
-      <%= link_to '追加で情報を入力する', "/users/:user_id/scores/new", class: "subtitle" %>
+      <%= link_to '追加で情報を入力する', new_user_score_path(current_user), class: "subtitle" %>
       <div class='score-explain-box'>
         <%= @score.score_year %>
       </div>
@@ -36,6 +35,5 @@
           </tr>
         </tbody>
       </table>
-    <% end %>
   </div>
 </div>
