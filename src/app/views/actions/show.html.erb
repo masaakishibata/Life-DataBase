@@ -3,7 +3,7 @@
 
   <div class="ldb-action-contents">
     <h1 class="action-title">あなたが日頃つかっている費用です</h1>
-    <%= link_to '追加で情報を入力する', "/users/:user_id/actions/new", class: "subtitle" %>
+    <%= link_to '情報を編集する', edit_action_path, class: "subtitle" %>
     <div class='action-explain-box'>
       <%= @action.action_day%>
     </div>

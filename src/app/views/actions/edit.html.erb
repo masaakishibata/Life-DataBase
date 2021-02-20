@@ -3,7 +3,7 @@
 <div class="service-contents">
   <div class="service-main">
     <h1 class="service-main-title">情報を入力しよう！</h1>
-    <%= form_with model: @action, url: actions_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
+    <%= form_with model: @action, url: action_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
 
       <%= render 'shared/error_messages', model: f.object %>
 
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class='input-content-btn'>
-        <%= f.submit "情報を作成" ,class:"input-ldb-btn" %>
+        <%= f.submit "情報を編集" ,class:"input-ldb-btn" %>
       </div>
     <% end %>
   </div>

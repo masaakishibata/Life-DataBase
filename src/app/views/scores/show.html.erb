@@ -1,39 +1,39 @@
 <%= render "shared/header" %>
+<div class="score-main-service">
 
-<div class="ldb-score-contents">
-  <% @scores.each do |score| %>
+  <div class="ldb-score-contents">
     <h1 class="score-title">本日の計算結果です</h1>
-    <%= link_to '情報を編集する', edit_score_path(score), class: "subtitle" %>
+    <%= link_to '情報を編集する', edit_score_path, class: "subtitle" %>
     <div class='score-explain-box'>
-      <%= score.score_year %>
+      <%= @score.score_year %>
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-title">月収</th>
-          <td class="detail-value"><%= score.monthly_income %></td>
+          <td class="detail-value"><%= @score.monthly_income %></td>
         </tr>
         <tr>
           <th class="detail-title">出費</th>
-          <td class="detail-value"><%= score.expense %></td>
+          <td class="detail-value"><%= @score.expense %></td>
         </tr>
         <tr>
           <th class="detail-title">月間の出費</th>
-          <td class="detail-value"><%= score.score_month %></td>
+          <td class="detail-value"><%= @score.score_month %></td>
         </tr>
         <tr>
           <th class="detail-title">所持金</th>
-          <td class="detail-value"><%= score.pay %></td>
+          <td class="detail-value"><%= @score.pay %></td>
         </tr>
         <tr>
           <th class="detail-title">使ったお金</th>
-          <td class="detail-value"><%= score.pay_all %></td>
+          <td class="detail-value"><%= @score.pay_all %></td>
         </tr>
         <tr>
           <th class="detail-title">本日の出費</th>
-          <td class="detail-value"><%= score.score_day %></td>
+          <td class="detail-value"><%= @score.score_day %></td>
         </tr>
       </tbody>
     </table>
-  <% end %>
+  </div>
 </div>

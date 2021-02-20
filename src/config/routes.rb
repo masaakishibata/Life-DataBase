@@ -5,9 +5,8 @@ Rails.application.routes.draw do
   }
 
   root to: 'users#index'
-  resources :users do
-    resources :actions
-    resources :scores
-  end
+  resources :users
+  resources :actions
+  resources :scores
 
 end
