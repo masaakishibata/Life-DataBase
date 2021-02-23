@@ -2,20 +2,16 @@
 
   <div class="right-title-contents">
     <% if user_signed_in? %>
-      <a href='/users/:user_id/actions/new'>
-        <h3 class="right-title">情報を管理しよう</h3>
+      <%= link_to '情報を管理しよう', new_action_path, class: "right-title" %>
         <p class="service-add">自分の情報を管理できていますか？</p>
         <p class="add-title">食費で使っているお金！</p>
         <p class="add-title2">買い物で使っているお金！</p>
         <p class="add-title3">生活費で使っているお金！</p>
-      </a>
     <% else %>
-      <a href='/users/sign_in'>
         <p class="service-add">自分の情報を管理できていますか？</p>
         <p class="add-title">食費で使っているお金！</p>
         <p class="add-title2">買い物で使っているお金！</p>
         <p class="add-title3">生活費で使っているお金！</p>
-      </a>
     <% end %>
   </div>
 </div>

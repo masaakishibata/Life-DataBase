@@ -32,7 +32,6 @@ class UsersController < ApplicationController
     ).merge(
       action_id: params[:action_id],
       score_id: params[:score_id],
-      token: params[:token],
     )
   end
 
