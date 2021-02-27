@@ -1,8 +1,7 @@
 class ScoresController < ApplicationController
-  before_action :score_new, only: [:index, :new, :edit, :show]
-
 
   def index
+    @scores = current_user.scores
   end
 
   def new
@@ -10,20 +9,22 @@ class ScoresController < ApplicationController
   end
 
   def edit
-    @score = Score.find(params[:id])
+    @score = current_user.scores.find(params[:id])
   end
 
   def create
-    @score = Score.create(score_params)
+    # binding.pry
+    @score = current_user.scores.create(score_params)
     if @score.valid?
       @score.save
-      redirect_to root_path
+      redirect_to scores_path
     else
       render action: :new
     end
   end
 
   def show
+    @score = Score.find(params[:id])
   end
 
   def destroy
@@ -38,7 +39,7 @@ class ScoresController < ApplicationController
   def update
     @score = Score.find(params[:id])
     @score.update(score_params)
-    redirect_to '/users/:id'
+    redirect_to scores_path
   end
 
   private
@@ -52,13 +53,6 @@ class ScoresController < ApplicationController
       :pay,
       :pay_all,
       :expense,
-    ).merge(
-      user_id: current_user.id,
     )
   end
-
-  def score_new
-    @score = Score.new
-  end
-
 end

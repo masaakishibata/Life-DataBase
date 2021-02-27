@@ -3,7 +3,7 @@
 <div class="service-contents">
   <div class="service-main">
     <h1 class="service-main-title">情報を入力しよう！</h1>
-    <%= form_with model: @action, url: actions_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
+    <%= form_with model: @action, url: action_path, id: 'service-form', class: 'service-form-wrap',local: true do |f| %>
 
       <%= render 'shared/error_messages', model: f.object %>
 
@@ -24,7 +24,7 @@
             <label class="form-text">本日の食費</label>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :food_expenses, class:"input-default", id:"food-number", placeholder:"朝、昼、夜の合計", maxlength:"16" %>
+          <%= f.text_area :food_expenses, class:"input-default", id:"food-number", placeholder:"朝、昼、夜の合計", maxlength:"16" %>
         </div>
       </div>
       <div class="shopping-expenses-form">
@@ -34,7 +34,7 @@
             <label class="form-text">買い物に使った金額</label>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :shopping, class:"input-default", id:"shopping-number", placeholder:"品物の金額(無い場合は0を入力してください)", maxlength:"16" %>
+          <%= f.text_area :shopping, class:"input-default", id:"shopping-number", placeholder:"品物の金額(無い場合は0を入力してください)", maxlength:"16" %>
         </div>
       </div>
       <div class="living-expenses-form">
@@ -43,12 +43,12 @@
           <div class="form-text-wrap">
             <label class="form-text">毎日の生活費</label>
             <span class="indispensable">必須</span>
-            <%= f.text_field :living_expenses, class:"input-default", id:"living-number", placeholder:"買い物と食費以外の費用", maxlength:"16" %>
+            <%= f.text_area :living_expenses, class:"input-default", id:"living-number", placeholder:"買い物と食費以外の費用", maxlength:"16" %>
           </div>
         </div>
       </div>
       <div class='input-content-btn'>
-        <%= f.submit "情報を作成" ,class:"input-ldb-btn" %>
+        <%= f.submit "情報を編集" ,class:"input-ldb-btn" %>
       </div>
     <% end %>
   </div>

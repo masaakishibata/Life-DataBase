@@ -3,7 +3,7 @@
 <div class='scores-contents'>
   <div class='scores-main'>
     <h1 class='scores-title'>毎月〜毎日の費用を計算しよう！</h1>
-    <%= form_with model: @score, url: scores_path, local: true do |f| %>
+    <%= form_with model: @score, url: score_path, local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
@@ -75,17 +75,11 @@
             <span class="score-yen">¥</span>
             <%= f.text_field :score_day, class:"score_day_input", id:"score_day", placeholder:"例）300" %>
           </div>
+        </div>
       </div>
-      <% if user_signed_in? %>
-          <div class='input-btn'>
-            <%= f.submit "計算結果を保存する" ,class:"input-red-btn" %>
-          </div>
-      <% else %>
-          <div class='input-btn'>
-            <%= link_to "アカウントを作成する",new_user_registration_path, class:"input-red-btn" %>
-          </div>
-      <% end %>
-    </div>
+      <div class='input-btn'>
+        <%= f.submit "編集結果を保存する", class:"input-red-btn" %>
+      </div>
     <% end %>
   </div>
 </div>

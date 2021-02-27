@@ -14,6 +14,5 @@ class Action < ApplicationRecord
 
   end
   
-  belongs_to :scores
   belongs_to :users
 end
