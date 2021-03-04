@@ -64,3 +64,4 @@ end
 gem 'rubocop'
 gem 'rubocop-rails'
 gem 'rails-i18n'
+gem 'babel-transpiler'
