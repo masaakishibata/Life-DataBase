@@ -1,0 +1,55 @@
+.right-header {
+  display: flex;
+  height: 100vh;
+  background-image: image-url('ldb-right.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.right-title-contents {
+  font-size: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-title {
+  background-color: rgb(125, 243, 247);
+  color: #fff;
+  margin-left: 20%;
+  padding-left: 12%;
+}
+
+.service-add {
+  font-size: 2.5vh;
+  padding: 1vh 10vw;
+  color: rgb(243, 241, 96);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid black;
+}
+
+.add-title {
+  font-size: 2.5vh;
+  padding: 1vh 10vw;
+  color: rgb(243, 241, 96);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid black;
+}
+
+.add-title2 {
+  font-size: 2.5vh;
+  padding: 1vh 10vw;
+  color: rgb(243, 241, 96);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid black;
+}
+
+.add-title3 {
+  font-size: 2.5vh;
+  padding: 1vh 10vw;
+  color:rgb(243, 241, 96);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid black;
+}
+

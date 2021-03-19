@@ -1,0 +1,58 @@
+.left-header {
+  background-color: rgb(152, 243, 92);
+  display: flex;
+  height: 100vh;
+  background-image: image-url('ldb-left.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.left-title-contents {
+  background-color: #fff;
+}
+
+.left-title {
+  font-size: 5vh;
+  margin-left: 30px;
+}
+
+.service-question-day {
+  font-size: 2.5vh;
+  padding: 5vh 10vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-question-month {
+  font-size: 2.5vh;
+  line-height: 40px;
+  padding: 5vh 10vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.add {
+  font-size: 2.5vh;
+  line-height: 40px;
+  padding: 5vh 10vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.start-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.start-ldb-btn {
+  width: 100%;
+  background: #888;
+  border: 1px solid #ea352d;
+  color: rgb(248, 232, 6);
+  line-height: 48px;
+  font-size: 14px;
+  padding-left: 35%;
+  cursor: pointer;
+}
